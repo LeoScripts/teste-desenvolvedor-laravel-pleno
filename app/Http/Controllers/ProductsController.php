@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreProductsRequest;
 use App\Http\Requests\UpdateProductsRequest;
 use App\Models\Products;
+use Error;
 
 class ProductsController extends Controller
 {
@@ -44,9 +45,13 @@ class ProductsController extends Controller
   /**
    * Display the specified resource.
    */
-  public function show(Products $products)
+  public function show($id)
   {
-    //
+    $product = $this->model->find($id);
+    if ($product) {
+      return view('pages/products.show', compact('product'));
+    }
+    throw new Error('Produto não encontrado');
   }
 
   /**
