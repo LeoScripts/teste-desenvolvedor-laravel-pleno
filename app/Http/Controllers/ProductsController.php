@@ -63,8 +63,15 @@ class ProductsController extends Controller
     return redirect(route('products.show', ['id' => $id]));
   }
 
-  public function destroy(Products $products)
+  public function destroy($id)
   {
-    //
+    $product = $this->model->find($id);
+    // dd($id);
+    if (!$product)
+      echo ('Produto não encontrado: ' . '"' . $id . '"');
+
+
+    $product->delete($id);
+    return redirect(route('products.index',));
   }
 }

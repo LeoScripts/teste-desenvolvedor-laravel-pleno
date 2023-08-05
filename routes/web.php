@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::middleware(['auth'])->prefix('/products')->group(function () {
+  Route::get('/destroy/{id}', [ProductsController::class, 'destroy'])->name('products.destroy');
   Route::get('/edit/{id}', [ProductsController::class, 'edit'])->name('products.edit');
   Route::get('/{id}', [ProductsController::class, 'show'])->name('products.show');
   Route::put('/', [ProductsController::class, 'update'])->name('products.update');
