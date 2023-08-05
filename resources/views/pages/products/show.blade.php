@@ -1,7 +1,7 @@
 <x-app-layout>
   <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-      {{ __('Product details') }}
+      {{ __('Detalhes do Produto') }}
     </h2>
   </x-slot>
 
@@ -20,14 +20,14 @@
                 </tr>
               </thead>
               <tbody class="w-full">
-                <a href="{{route('dashboard', $product->id)}}" class="border-2 border-green-400">
-                  <tr class="border-b border-gray-300   hover:bg-gray-50">
-                    <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->id}}</td>
-                    <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->name}}</td>
-                    <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->categories}}</td>
-                    <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->description}}</td>
-                  </tr>
-                </a>
+                <div class=" w-full flex items-center justify-end px-4">
+                  <a href="{{route('products.edit', $product->id)}}" class="px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300">Editar</a>
+                </div>
+                <td class=" text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->id}}</td>
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->name}}</td>
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->categories}}</td>
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->description}}</td>
+                </tr>
               </tbody>
             </table>
           </div>

@@ -31,10 +31,12 @@ Route::middleware('auth')->group(function () {
 
 
 Route::middleware(['auth'])->prefix('/products')->group(function () {
+  Route::get('/edit/{id}', [ProductsController::class, 'edit'])->name('products.edit');
   Route::get('/{id}', [ProductsController::class, 'show'])->name('products.show');
+  Route::put('/', [ProductsController::class, 'update'])->name('products.update');
   Route::get('/', [ProductsController::class, 'index'])->name('products.index');
-  Route::get('/create', [ProductsController::class, 'create'])->name('products.create');
   Route::post('/', [ProductsController::class, 'store'])->name('products.store');
+  Route::get('/create/new', [ProductsController::class, 'create'])->name('products.create');
 });
 
 require __DIR__ . '/auth.php';

@@ -1,7 +1,7 @@
 <x-app-layout>
   <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-      {{ __('New Product') }}
+      {{ __('Novo Produto') }}
     </h2>
   </x-slot>
 
@@ -19,7 +19,10 @@
               <input class="p-2" type="text" name="categories" placeholder="Categoria do Produto">
             </div>
             <textarea name="description" cols="10" rows="5" class="" placeholder="Digite uma descrição"></textarea>
-            <button type="submit">Criar</button>
+            <div class="flex items-center gap-4">
+              <a href="{{route('products.index')}}" class="mt-2 px-4 py-2 bg-red-800 dark:bg-red-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-red-800 uppercase tracking-widest hover:bg-red-700 dark:hover:bg-white focus:bg-red-700 dark:focus:bg-white active:bg-red-900 dark:active:bg-red-300">Cancelar</a>
+              <button type="submit" class=" mt-2 px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300">Criar</button>
+            </div>
           </form>
         </div>
       </div>

@@ -15,36 +15,24 @@ class ProductsController extends Controller
   {
     $this->model = $products;
   }
-  /**
-   * Display a listing of the resource.
-   */
+
   public function index()
   {
     $products = Products::paginate(10);
     return view('pages/products/index', compact('products'));
   }
 
-  /**
-   * Show the form for creating a new resource.
-   */
   public function create()
   {
-    // dd('oi');
     return view('pages/products/create');
   }
 
-  /**
-   * Store a newly created resource in storage.
-   */
   public function store(StoreProductsRequest $request)
   {
     $this->model->create($request->all());
     return redirect(route('products.index'));
   }
 
-  /**
-   * Display the specified resource.
-   */
   public function show($id)
   {
     $product = $this->model->find($id);
@@ -54,25 +42,27 @@ class ProductsController extends Controller
     throw new Error('Produto não encontrado');
   }
 
-  /**
-   * Show the form for editing the specified resource.
-   */
-  public function edit(Products $products)
+  public function edit($id)
   {
-    //
+    if ($product = $this->model->find($id))
+      return view('pages/products.edit', compact('product'));
+
+    echo ('Produto não encontrado: ' . '"' . $id . '"');
   }
 
-  /**
-   * Update the specified resource in storage.
-   */
-  public function update(UpdateProductsRequest $request, Products $products)
+  public function update(UpdateProductsRequest $request, $id = 5)
   {
-    //
+    $data = $request->all();
+    $product = $this->model->find($id);
+    // dd($id);
+    if (!$product)
+      echo ('Produto não encontrado: ' . '"' . $id . '"');
+
+
+    $product->update($data);
+    return redirect(route('products.show', ['id' => $id]));
   }
 
-  /**
-   * Remove the specified resource from storage.
-   */
   public function destroy(Products $products)
   {
     //
