@@ -50,11 +50,10 @@ class ProductsController extends Controller
     echo ('Produto não encontrado: ' . '"' . $id . '"');
   }
 
-  public function update(UpdateProductsRequest $request, $id = 5)
+  public function update(UpdateProductsRequest $request, $id)
   {
     $data = $request->all();
     $product = $this->model->find($id);
-    // dd($id);
     if (!$product)
       echo ('Produto não encontrado: ' . '"' . $id . '"');
 
@@ -69,7 +68,6 @@ class ProductsController extends Controller
     // dd($id);
     if (!$product)
       echo ('Produto não encontrado: ' . '"' . $id . '"');
-
 
     $product->delete($id);
     return redirect(route('products.index',));
