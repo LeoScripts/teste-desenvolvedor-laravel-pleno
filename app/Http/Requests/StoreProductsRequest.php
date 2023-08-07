@@ -23,7 +23,6 @@ class StoreProductsRequest extends FormRequest
   {
     return [
       'name' => 'required|string|max:255',
-      'categories' => 'string|max:255'
     ];
   }
 }

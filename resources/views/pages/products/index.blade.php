@@ -27,7 +27,14 @@
               <tr onclick=location.href="{{route('products.show', $product->id)}}" style="cursor: pointer" class="border-b border-gray-300 hover:bg-gray-50">
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->id}}</td>
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->name}}</td>
-                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->categories}}</td>
+
+
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">
+                  @foreach($product->category as $category)
+                  {{ $category->name }}
+                  @endforeach
+                </td>
+
 
 
                 @if(optional($product->productDetail)->detail === null)

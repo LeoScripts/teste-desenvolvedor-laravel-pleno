@@ -18,7 +18,6 @@ class CategoriesFactory extends Factory
   {
     return [
       'name' => fake()->firstName(),
-      'description' => fake()->realText(),
     ];
   }
 }

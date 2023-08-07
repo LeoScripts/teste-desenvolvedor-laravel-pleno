@@ -15,7 +15,6 @@
                 <tr>
                   <th class="text-left p-4 font-semibold text-gray-600">#</th>
                   <th class="text-left p-4 font-semibold text-gray-600">Nome</th>
-                  <th class="text-left p-4 font-semibold text-gray-600">Descrição</th>
                 </tr>
               </thead>
               <tbody class="w-full">
@@ -25,7 +24,6 @@
                 </div>
                 <td class=" text-left py-2 px-4 font-light text-gray-700 text-sm">{{$category->id}}</td>
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$category->name}}</td>
-                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$category->description}}</td>
                 </tr>
               </tbody>
             </table>

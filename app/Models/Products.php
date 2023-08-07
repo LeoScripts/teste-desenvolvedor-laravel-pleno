@@ -12,11 +12,15 @@ class Products extends Model
   protected $fillable = [
     'name',
     'description',
-    'categories',
   ];
 
   public function productDetail()
   {
     return $this->hasOne(ProductDetail::class);
+  }
+
+  public function category()
+  {
+    return $this->belongsToMany(Categories::class, 'categories_products', 'product_id', 'category_id');
   }
 }
