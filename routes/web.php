@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,5 +51,6 @@ Route::middleware(['auth'])->prefix('/categories')->group(function () {
   Route::post('/', [CategoriesController::class, 'store'])->name('categories.store');
   Route::get('/create/new', [CategoriesController::class, 'create'])->name('categories.create');
 });
+
 
 require __DIR__ . '/auth.php';

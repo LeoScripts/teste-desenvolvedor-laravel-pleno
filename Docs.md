@@ -64,7 +64,7 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 - [ ] 5 Validação e tratamento de erros
 
   - [x] criar formularios
-  - [ ] implementar validações
+  - [x] implementar validações
   - [ ] tratar o erros com mensagens
 
 - [x] 6 middleware

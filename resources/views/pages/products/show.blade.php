@@ -27,7 +27,13 @@
                 <td class=" text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->id}}</td>
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->name}}</td>
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->categories}}</td>
-                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->description}}</td>
+                @if(optional($product->productDetail)->detail === null)
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">
+                  -- sem descrição --
+                </td>
+                @else
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{optional($product->productDetail)->detail}}</td>
+                @endif
                 </tr>
               </tbody>
             </table>

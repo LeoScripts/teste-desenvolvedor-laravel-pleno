@@ -17,8 +17,8 @@
               <tr>
                 <th class="text-left p-4 font-semibold text-gray-600">#</th>
                 <th class="text-left p-4 font-semibold text-gray-600">Nome</th>
-                <th class="text-left p-4 font-semibold text-gray-600">Descrição</th>
                 <th class="text-left p-4 font-semibold text-gray-600">Categoria</th>
+                <th class="text-left p-4 font-semibold text-gray-600">teste</th>
               </tr>
             </thead>
             <tbody class="w-full">
@@ -27,10 +27,17 @@
               <tr onclick=location.href="{{route('products.show', $product->id)}}" style="cursor: pointer" class="border-b border-gray-300 hover:bg-gray-50">
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->id}}</td>
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->name}}</td>
-                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->description}}</td>
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$product->categories}}</td>
-              </tr>
 
+
+                @if(optional($product->productDetail)->detail === null)
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">
+                  -- sem descrição --
+                </td>
+                @else
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{optional($product->productDetail)->detail}}</td>
+                @endif
+              </tr>
               @endforeach
             </tbody>
           </table>

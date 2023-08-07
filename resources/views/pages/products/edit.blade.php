@@ -23,7 +23,7 @@
               </div>
               <div class="flex flex-col">
                 <label class="text-red-800" for="name">Descrição</label>
-                <textarea name="description" cols="20" rows="5" class="w-sm rounded" placeholder="Digite uma descrição">{{$product->description}}</textarea>
+                <textarea name="description" cols="20" rows="5" class="w-sm rounded" placeholder="Digite uma descrição">{{optional($product->productDetail)->detail}}</textarea>
               </div>
             </div>
             <div class="flex items-center justify-center gap-4">

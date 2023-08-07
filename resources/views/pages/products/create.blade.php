@@ -14,7 +14,7 @@
             <div class="w-xl flex items-center flex-col justify-center gap-4">
               <input class="rounded" type="text" name="name" placeholder="Nome do Produto">
               <input class="rounded" type="text" name="categories" placeholder="Categoria do Produto">
-              <textarea name="description" cols="20" rows="5" class="w-sm rounded" placeholder="Digite uma descrição"></textarea>
+              <!-- <textarea name="description" cols="20" rows="5" class="w-sm rounded" placeholder="Digite uma descrição"></textarea> -->
             </div>
 
             <div class="flex items-center justify-center gap-4">

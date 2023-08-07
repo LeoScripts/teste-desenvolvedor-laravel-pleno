@@ -64,7 +64,6 @@ class CategoriesController extends Controller
   public function destroy($id)
   {
     $category = $this->model->find($id);
-    // dd($id);
     if (!$category)
       echo ('Categoria não encontrada: ' . '"' . $id . '"');
 
