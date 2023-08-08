@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\AddressController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -43,7 +42,7 @@ Route::middleware(['auth'])->prefix('/products')->group(function () {
   Route::get('/create/new', [ProductsController::class, 'create'])->name('products.create');
 });
 
-Route::middleware(['auth'])->prefix('/categories')->group(function () {
+Route::middleware(['auth', 'admin'])->prefix('/categories')->group(function () {
   Route::get('/destroy/{id}', [CategoriesController::class, 'destroy'])->name('categories.destroy');
   Route::get('/edit/{id}', [CategoriesController::class, 'edit'])->name('categories.edit');
   Route::get('/{id}', [CategoriesController::class, 'show'])->name('categories.show');
@@ -54,7 +53,7 @@ Route::middleware(['auth'])->prefix('/categories')->group(function () {
 });
 
 
-Route::middleware(['auth'])->prefix('/brands')->group(function () {
+Route::middleware(['auth', 'admin'])->prefix('/brands')->group(function () {
   Route::get('/destroy/{id}', [BrandController::class, 'destroy'])->name('brands.destroy');
   Route::get('/edit/{id}', [BrandController::class, 'edit'])->name('brands.edit');
   Route::get('/{id}', [BrandController::class, 'show'])->name('brands.show');

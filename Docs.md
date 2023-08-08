@@ -61,7 +61,7 @@ Resolução do teste de Desenvolvedor Laravel Pleno
   - [x] um para muitos
   - [x] muito para muitos
 
-- [ ] 5 Validação e tratamento de erros
+- [x] 5 Validação e tratamento de erros
 
   - [x] criar formularios
   - [x] implementar validações
@@ -79,6 +79,12 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 - [x] implementar paginação
 
 - [x] eager loading(carregamento rapido)
+
+- [x] intens a mais
+  - Popular banco com dados ao iniciar
+    - User Admin
+    - Marcas
+    - Categorias
 
 ## :rocket: Technologies
 
@@ -121,11 +127,12 @@ $ php artisan serve
 
 ## passo a passo para uso
 
-1. criar Marcas
+1. criar Marcas e categorias e usuario admin
 
-2. criar Categorias
+```bash
+php artisan db:seed
 
-3. criar
+```
 
 ## :memo: License
 

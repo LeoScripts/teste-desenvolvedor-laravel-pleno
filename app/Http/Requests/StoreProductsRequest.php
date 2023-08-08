@@ -24,7 +24,7 @@ class StoreProductsRequest extends FormRequest
     return [
       'name' => 'required|string|max:255',
       'brands_id' => 'required',
-      'categires_id' => 'required'
+      'categoryId' => 'required'
     ];
   }
 
