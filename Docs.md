@@ -25,22 +25,22 @@
 </p>
 
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <a href="#dart-sobre">sobre</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-funcionalidades">funcionalidades</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias">tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-pre_requisitos">pre_requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-executar_projeto">executar_projeto</a> &#xa0; | &#xa0;
+  <a href="#memo-licença">licença</a> &#xa0; | &#xa0;
   <a href="https://github.com/LeoScripts" target="_blank">Author</a>
 </p>
 
 <br>
 
-## :dart: About
+## :dart: sobre
 
 Resolução do teste de Desenvolvedor Laravel Pleno
 
-## :sparkles: Features
+## :sparkles: funcionalidades
 
 <!-- :heavy_check_mark: Feature 1;\
 :heavy_check_mark: Feature 2;\
@@ -86,18 +86,18 @@ Resolução do teste de Desenvolvedor Laravel Pleno
     - Marcas
     - Categorias
 
-## :rocket: Technologies
+## :rocket: tecnologias
 
 The following tools were used in this project:
 
 - [PHP](https://www.php.net/)
 - [Laravel](https://laravel.com/)
 
-## :white_check_mark: Requirements
+## :white_check_mark: pre_requisitos
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [PHP](https://www.php.net/), https://getcomposer.org/ and [Node](https://nodejs.org/en/) installed.
 
-## :checkered_flag: Starting
+## :checkered_flag: executar_projeto
 
 ```bash
 # Clone this project
@@ -108,15 +108,48 @@ $ cd teste-desenvolvedor-laravel-pleno
 
 # Install dependencies
 $ componser install && npm i
+
+# create APP_KEY
+$ php artisan key:generate
 ```
 
-## configuração .env
+- configuração .env
 
-```bash
+configurações de acesso do `banco de dados` e `serviços de email`
+
+```diff
+- ATENÇÃO
++  Usei o Mysql e o Mailtrap mas fique a vontade pra usar o banco e serviço de email que você quiser
+```
+
+```env
 # Banco de dados
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=app-leandro_cavalcante
+DB_USERNAME=root
+DB_PASSWORD=senha
 
 # Serviço de email
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=seu usario
+MAIL_PASSWORD=senha
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
 ```
+
+- excutar o seeders
+
+```bash
+php artisan db:seed
+
+```
+
+- executar o servidor
 
 ```bash
 # Run the project
@@ -125,18 +158,9 @@ $ php artisan serve
 # The server will initialize in the <http://localhost:8000>
 ```
 
-## passo a passo para uso
+## :memo: licença
 
-1. criar Marcas e categorias e usuario admin
-
-```bash
-php artisan db:seed
-
-```
-
-## :memo: License
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under licença from MIT. For more details, see the [licença](LICENSE.md) file.
 
 Made with :heart: by <a href="https://github.com/LeoScripts" target="_blank">Leandro Cavalcante</a>
 

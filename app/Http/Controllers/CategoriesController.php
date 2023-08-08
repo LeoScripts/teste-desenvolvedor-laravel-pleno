@@ -39,7 +39,7 @@ class CategoriesController extends Controller
     if ($category) {
       return view('pages/categories.show', compact('category'));
     }
-    throw new Error('Categoria não encontrada');
+    echo ('Categoria não encontrada');
   }
 
   public function edit($id)
