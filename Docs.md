@@ -65,7 +65,7 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 
   - [x] criar formularios
   - [x] implementar validações
-  - [ ] tratar o erros com mensagens
+  - [x] tratar o erros com mensagens
 
 - [x] 6 middleware
 
@@ -78,7 +78,7 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 
 - [x] implementar paginação
 
-- [ ] eager loading(carregamento rapido)
+- [x] eager loading(carregamento rapido)
 
 ## :rocket: Technologies
 

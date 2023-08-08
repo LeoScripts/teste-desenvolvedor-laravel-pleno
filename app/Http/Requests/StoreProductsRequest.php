@@ -23,6 +23,16 @@ class StoreProductsRequest extends FormRequest
   {
     return [
       'name' => 'required|string|max:255',
+      'brands_id' => 'required',
+      'categires_id' => 'required'
+    ];
+  }
+
+
+  public function messages()
+  {
+    return [
+      'required' => 'O campo ( :attribute ) é obrigatorio.'
     ];
   }
 }

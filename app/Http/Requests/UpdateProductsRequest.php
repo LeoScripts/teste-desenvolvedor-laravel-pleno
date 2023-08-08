@@ -23,6 +23,14 @@ class UpdateProductsRequest extends FormRequest
   {
     return [
       'name' => 'required|string|max:255',
+      'description' => 'required|string'
+    ];
+  }
+
+  public function messages()
+  {
+    return [
+      'required' => 'O campo ( :attribute ) é obrigatorio.'
     ];
   }
 }

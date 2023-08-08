@@ -93,6 +93,7 @@ class ProductsController extends Controller
   public function update(UpdateProductsRequest $request, $id)
   {
     $data = $request->all();
+    // dd($data);
     $product = $this->model->with('category')->find($id);
     $categoriesAll = $this->categories->all();
 

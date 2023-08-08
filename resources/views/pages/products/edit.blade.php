@@ -5,6 +5,15 @@
     </h2>
   </x-slot>
 
+
+  <div class="p-1 flex items-center justify-center flex-col">
+    @if ($errors->any())
+    @foreach ($errors->all() as $error)
+    <span class=" text-red-600 rounded ">{{ $error }}</span>
+    @endforeach
+    @endif
+  </div>
+
   <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -34,7 +43,6 @@
               <div class="flex flex-col">
                 <div class="flex flex-col">
                   <select name="categoryId" class="rounded w-xl">
-                    <option value="" selected>Selecione a categoria</option>
                     @if(isset($product->category))
                     @foreach($categories as $category)
                     <option value="{{$category->id}}" {{ $product->category[0]->id == $category->id  ? 'selected' : ''}}>{{ $category->name }}</option>
@@ -44,7 +52,7 @@
                 </div>
 
                 <div class="flex flex-col mt-4">
-                  <textarea name="description" cols="20" rows="5" class="w-sm rounded" required placeholder="Digite uma descrição">{{optional($product->productDetail)->detail}}</textarea>
+                  <textarea name="description" cols="20" rows="5" class="w-sm rounded" placeholder="Digite uma descrição">{{optional($product->productDetail)->detail}}</textarea>
                 </div>
               </div>
               <div class="flex items-center justify-center gap-4">
