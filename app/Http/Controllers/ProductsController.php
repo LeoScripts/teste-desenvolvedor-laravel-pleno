@@ -108,7 +108,7 @@ class ProductsController extends Controller
 
     $productDetail = $product->productDetail;
     if (!$productDetail) {
-      $productDetail = $this->detail->createOrUpdate([
+      $productDetail = new ProductDetail([
         'products_id' => $id,
         'detail' => $data['description'] || '',
       ]);
