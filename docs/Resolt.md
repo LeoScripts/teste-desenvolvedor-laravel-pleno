@@ -88,39 +88,37 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 
 ## :rocket: tecnologias
 
-The following tools were used in this project:
-
 - [PHP](https://www.php.net/)
 - [Laravel](https://laravel.com/)
 
 ## :white_check_mark: pre_requisitos
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [PHP](https://www.php.net/), https://getcomposer.org/ and [Node](https://nodejs.org/en/) installed.
+Para executar :checkered_flag:, você deve ter o [Git](https://git-scm.com), [PHP](https://www.php.net/), [Composer](https://getcomposer.org/) e [Node](https://nodejs.org/en/) instalados.
 
 ## :checkered_flag: executar_projeto
 
 ```bash
-# Clone this project
+# Clone o projeto
 $ git clone https://github.com/LeoScripts/teste-desenvolvedor-laravel-pleno
 
-# Access
+# Acesse o diretorio
 $ cd teste-desenvolvedor-laravel-pleno
 
-# Install dependencies
+# Instale as dependencias
 $ componser install && npm i
 
-# create APP_KEY
+# crie a chave do projeto
 $ php artisan key:generate
 ```
 
-- configuração .env
-
-configurações de acesso do `banco de dados` e `serviços de email`
+- configurações de acesso do `banco de dados` e `serviços de email`
 
 ```diff
 - ATENÇÃO
 +  Usei o Mysql e o Mailtrap mas fique a vontade pra usar o banco e serviço de email que você quiser
 ```
+
+> no arquivo `.env`
 
 ```env
 # Banco de dados
@@ -152,18 +150,17 @@ php artisan db:seed
 - executar o servidor
 
 ```bash
-# Run the project
 $ php artisan serve
-
-# The server will initialize in the <http://localhost:8000>
 ```
+
+o projeto estara rodando em [http://localhost:8000](http://localhost:8000)
 
 ## :memo: licença
 
-This project is under licença from MIT. For more details, see the [licença](LICENSE.md) file.
+Este projeto esta baseado na licença MIT. Para mais detalhes acesse [licença](LICENSE.md) .
 
-Made with :heart: by <a href="https://github.com/LeoScripts" target="_blank">Leandro Cavalcante</a>
+Projeto desenvolvido por <a href="https://github.com/LeoScripts" target="_blank">Leandro Cavalcante</a>
 
 &#xa0;
 
-<a href="#top">Back to top</a>
+<a href="#top">Volta ao topo</a>
