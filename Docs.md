@@ -55,11 +55,11 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 - [x] 2 CRUD do usuario
 - [x] 3 autenticação de usuario com pacote do Laravel Breeze
 
-- [ ] 4 relacionamento no eloquente
+- [x] 4 relacionamento no eloquente
 
-  - [ ] um para um
-  - [ ] um para muitos
-  - [ ] muito para muitos
+  - [x] um para um
+  - [x] um para muitos
+  - [x] muito para muitos
 
 - [ ] 5 Validação e tratamento de erros
 
@@ -102,12 +102,30 @@ $ cd teste-desenvolvedor-laravel-pleno
 
 # Install dependencies
 $ componser install && npm i
+```
 
+## configuração .env
+
+```bash
+# Banco de dados
+
+# Serviço de email
+```
+
+```bash
 # Run the project
 $ php artisan serve
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:8000>
 ```
+
+## passo a passo para uso
+
+1. criar Marcas
+
+2. criar Categorias
+
+3. criar
 
 ## :memo: License
 

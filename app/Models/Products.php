@@ -10,6 +10,7 @@ class Products extends Model
   use HasFactory;
 
   protected $fillable = [
+    'brands_id',
     'name',
     'description',
   ];
@@ -17,6 +18,11 @@ class Products extends Model
   public function productDetail()
   {
     return $this->hasOne(ProductDetail::class);
+  }
+
+  public function brand()
+  {
+    return $this->belongsTo(Brand::class);
   }
 
   public function category()

@@ -16,21 +16,30 @@
               <div class="flex flex-col">
                 <input class="rounded" type="text" name="name" value="{{$product->name}}" placeholder="Nome do Produto">
               </div>
+
+
+              <div class="flex flex-col">
+                <div class="flex flex-col">
+                  <select name="brands_id" class="rounded w-xl">
+                    @foreach($brands as $brand)
+                    <option value="{{$brand->id}}" {{ $product->brands_id === $brand->id ? 'selected' : ''}}>
+                      {{$brand->name}}
+                    </option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
+
+
               <div class="flex flex-col">
                 <div class="flex flex-col">
                   <select name="categoryId" class="rounded w-xl">
-
                     <option value="" selected>Selecione a categoria</option>
-
                     @if(isset($product->category))
-                    @foreach($product->category as $category)
-                    <option value="{{$category->id}}" selected>{{ $category->name }}</option>
+                    @foreach($categories as $category)
+                    <option value="{{$category->id}}" {{ $product->category[0]->id == $category->id  ? 'selected' : ''}}>{{ $category->name }}</option>
                     @endforeach
                     @endif
-
-                    @foreach($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
-                    @endforeach
                   </select>
                 </div>
 

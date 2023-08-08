@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -52,5 +53,15 @@ Route::middleware(['auth'])->prefix('/categories')->group(function () {
   Route::get('/create/new', [CategoriesController::class, 'create'])->name('categories.create');
 });
 
+
+Route::middleware(['auth'])->prefix('/brands')->group(function () {
+  Route::get('/destroy/{id}', [BrandController::class, 'destroy'])->name('brands.destroy');
+  Route::get('/edit/{id}', [BrandController::class, 'edit'])->name('brands.edit');
+  Route::get('/{id}', [BrandController::class, 'show'])->name('brands.show');
+  Route::put('/{id}', [BrandController::class, 'update'])->name('brands.update');
+  Route::get('/', [BrandController::class, 'index'])->name('brands.index');
+  Route::post('/', [BrandController::class, 'store'])->name('brands.store');
+  Route::get('/create/new', [BrandController::class, 'create'])->name('brands.create');
+});
 
 require __DIR__ . '/auth.php';

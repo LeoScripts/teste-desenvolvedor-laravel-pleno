@@ -16,6 +16,7 @@
                   <th class="text-left p-4 font-semibold text-gray-600">#</th>
                   <th class="text-left p-4 font-semibold text-gray-600">Nome</th>
                   <th class="text-left p-4 font-semibold text-gray-600">Categoria</th>
+                  <th class="text-left p-4 font-semibold text-gray-600">Marca</th>
                   <th class="text-left p-4 font-semibold text-gray-600">Descrição</th>
                 </tr>
               </thead>
@@ -31,6 +32,9 @@
                   {{ $category->name}}
                   @endforeach
                 </td>
+
+                <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">{{$brands[$product->brands_id - 1]->name}}</td>
+
                 @if(optional($product->productDetail)->detail === null)
                 <td class="text-left py-2 px-4 font-light text-gray-700 text-sm">
                   -- sem descrição --

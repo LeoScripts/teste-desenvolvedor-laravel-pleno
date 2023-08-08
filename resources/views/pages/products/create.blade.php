@@ -14,6 +14,15 @@
             <div class="w-xl flex items-center flex-col justify-center gap-4">
               <input class="rounded" type="text" name="name" placeholder="Nome do Produto">
 
+              <select name="brands_id" class="rounded w-xl">
+                <option value="selecione" selected disabled>Selecione a Marca</option>
+
+                @foreach($brands as $brand)
+                <option value="{{$brand->id}}">{{$brand->name}}</option>
+                @endforeach
+
+              </select>
+
               <select name="categoryId" class="rounded w-xl">
                 <option value="selecione" selected disabled>Selecione a Categoria</option>
 
