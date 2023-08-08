@@ -1,0 +1,169 @@
+<div align="center" id="top"> 
+  <!-- <img src="./.github/app.gif" alt="Teste Desenvolvedor Laravel Pleno" /> -->
+
+&#xa0;
+
+  <!-- <a href="https://testedesenvolvedorlaravelpleno.netlify.app">Demo</a> -->
+</div>
+
+<h1 align="center">Teste Desenvolvedor Laravel Pleno</h1>
+
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/LeoScripts/teste-desenvolvedor-laravel-pleno?color=56BEB8">
+
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/LeoScripts/teste-desenvolvedor-laravel-pleno?color=56BEB8">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/LeoScripts/teste-desenvolvedor-laravel-pleno?color=56BEB8">
+
+  <img alt="License" src="https://img.shields.io/github/license/LeoScripts/teste-desenvolvedor-laravel-pleno?color=56BEB8">
+
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/LeoScripts/teste-desenvolvedor-laravel-pleno?color=56BEB8" /> -->
+
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/LeoScripts/teste-desenvolvedor-laravel-pleno?color=56BEB8" /> -->
+
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/LeoScripts/teste-desenvolvedor-laravel-pleno?color=56BEB8" /> -->
+</p>
+
+<p align="center">
+  <a href="#dart-sobre">sobre</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-funcionalidades">funcionalidades</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias">tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-pre_requisitos">pre_requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-executar_projeto">executar_projeto</a> &#xa0; | &#xa0;
+  <a href="#memo-licença">licença</a> &#xa0; | &#xa0;
+  <a href="https://github.com/LeoScripts" target="_blank">Author</a>
+</p>
+
+<br>
+
+## :dart: sobre
+
+Resolução do teste de Desenvolvedor Laravel Pleno
+
+## :sparkles: funcionalidades
+
+<!-- :heavy_check_mark: Feature 1;\
+:heavy_check_mark: Feature 2;\
+:heavy_check_mark: Feature 3; -->
+
+- :heavy_check_mark: 1 criar projeto laravel basico
+
+  - [x] configurar o banco de dados
+  - [x] definir as migrations necessarias
+  - [x] definir modelos
+
+- [x] 2 CRUD do usuario
+- [x] 3 autenticação de usuario com pacote do Laravel Breeze
+
+- [x] 4 relacionamento no eloquente
+
+  - [x] um para um
+  - [x] um para muitos
+  - [x] muito para muitos
+
+- [x] 5 Validação e tratamento de erros
+
+  - [x] criar formularios
+  - [x] implementar validações
+  - [x] tratar o erros com mensagens
+
+- [x] 6 middleware
+
+- [x] 7 testes automatizados PHPunit
+
+- [x] 7 E-mail e notificações
+
+  - [x] envio de e-mail
+  - [x] notificação para usuario
+
+- [x] implementar paginação
+
+- [x] eager loading(carregamento rapido)
+
+- [x] intens a mais
+  - Popular banco com dados ao iniciar
+    - User Admin
+    - Marcas
+    - Categorias
+
+## :rocket: tecnologias
+
+The following tools were used in this project:
+
+- [PHP](https://www.php.net/)
+- [Laravel](https://laravel.com/)
+
+## :white_check_mark: pre_requisitos
+
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [PHP](https://www.php.net/), https://getcomposer.org/ and [Node](https://nodejs.org/en/) installed.
+
+## :checkered_flag: executar_projeto
+
+```bash
+# Clone this project
+$ git clone https://github.com/LeoScripts/teste-desenvolvedor-laravel-pleno
+
+# Access
+$ cd teste-desenvolvedor-laravel-pleno
+
+# Install dependencies
+$ componser install && npm i
+
+# create APP_KEY
+$ php artisan key:generate
+```
+
+- configuração .env
+
+configurações de acesso do `banco de dados` e `serviços de email`
+
+```diff
+- ATENÇÃO
++  Usei o Mysql e o Mailtrap mas fique a vontade pra usar o banco e serviço de email que você quiser
+```
+
+```env
+# Banco de dados
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=app-leandro_cavalcante
+DB_USERNAME=root
+DB_PASSWORD=senha
+
+# Serviço de email
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=seu usario
+MAIL_PASSWORD=senha
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+- excutar o seeders
+
+```bash
+php artisan db:seed
+
+```
+
+- executar o servidor
+
+```bash
+# Run the project
+$ php artisan serve
+
+# The server will initialize in the <http://localhost:8000>
+```
+
+## :memo: licença
+
+This project is under licença from MIT. For more details, see the [licença](LICENSE.md) file.
+
+Made with :heart: by <a href="https://github.com/LeoScripts" target="_blank">Leandro Cavalcante</a>
+
+&#xa0;
+
+<a href="#top">Back to top</a>
