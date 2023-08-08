@@ -2,6 +2,10 @@
 
 Bem-vindo ao teste de desenvolvimento Laravel! Neste teste, avaliaremos suas habilidades em criar um projeto Laravel completo, trabalhar com o Eloquent ORM, implementar autenticação, escrever testes automatizados e lidar com diversos aspectos do desenvolvimento web com Laravel.
 
+## Resolução
+
+- [como executar o projeto](./docs/Resolt.md)
+
 ## Tarefas
 
 A seguir, estão as tarefas que você deverá realizar como parte deste teste:
