@@ -20,7 +20,7 @@
 
               <div class="flex flex-col">
                 <div class="flex flex-col">
-                  <select name="brands_id" class="rounded w-xl">
+                  <select name="brands_id" class="rounded w-xl" required>
                     @foreach($brands as $brand)
                     <option value="{{$brand->id}}" {{ $product->brands_id === $brand->id ? 'selected' : ''}}>
                       {{$brand->name}}

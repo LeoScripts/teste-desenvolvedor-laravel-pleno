@@ -76,7 +76,7 @@ Resolução do teste de Desenvolvedor Laravel Pleno
   - [x] envio de e-mail
   - [x] notificação para usuario
 
-- [ ] implementar paginação
+- [x] implementar paginação
 
 - [ ] eager loading(carregamento rapido)
 
