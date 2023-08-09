@@ -46,45 +46,45 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 :heavy_check_mark: Feature 2;\
 :heavy_check_mark: Feature 3; -->
 
-- :heavy_check_mark: 1 criar projeto laravel basico
+- :heavy_check_mark: 1 criar projeto laravel basico;
 
-  - :heavy_check_mark: configurar o banco de dados
-  - :heavy_check_mark: definir as migrations necessarias
-  - :heavy_check_mark: definir modelos
+  - :heavy_check_mark: configurar o banco de dados;
+  - :heavy_check_mark: definir as migrations necessarias;
+  - :heavy_check_mark: definir modelos;
 
-- :heavy_check_mark: 2 CRUD `categorias`,`marcas` e `produtos`
-- :heavy_check_mark: 3 autenticação de usuario com pacote do Laravel Breeze
+- :heavy_check_mark: 2 CRUD `categorias`,`marcas` e `produtos`;
+- :heavy_check_mark: 3 autenticação de usuario com pacote do Laravel Breeze;
 
-- :heavy_check_mark: 4 relacionamento no eloquente
+- :heavy_check_mark: 4 relacionamento no eloquente;
 
-  - :heavy_check_mark: um para um => `produto-descrição`
-  - :heavy_check_mark: um para muitos => `marca-produtos`
+  - :heavy_check_mark: um para um => `produto-descrição`;
+  - :heavy_check_mark: um para muitos => `marca-produtos`;
   - :heavy_check_mark: muito para muitos => `categorias-produtos`
 
-- :heavy_check_mark: 5 Validação e tratamento de erros
+- :heavy_check_mark: 5 Validação e tratamento de erros;
 
-  - :heavy_check_mark: criar formularios
-  - :heavy_check_mark: implementar validações
-  - :heavy_check_mark: tratar o erros com mensagens
+  - :heavy_check_mark: criar formularios;
+  - :heavy_check_mark: implementar validações;
+  - :heavy_check_mark: tratar o erros com mensagens;
 
-- :heavy_check_mark: 6 middleware
+- :heavy_check_mark: 6 middleware;
 
-- :heavy_check_mark: 7 testes automatizados PHPunit
+- :heavy_check_mark: 7 testes automatizados PHPunit;
 
-- :heavy_check_mark: 8 E-mail e notificações
+- :heavy_check_mark: 8 E-mail e notificações;
 
-  - :heavy_check_mark: envio de e-mail
-  - :heavy_check_mark: notificação para usuario
+  - :heavy_check_mark: envio de e-mail;
+  - :heavy_check_mark: notificação para usuario;
 
-- :heavy_check_mark: implementar paginação
+- :heavy_check_mark: implementar paginação;
 
-- :heavy_check_mark: eager loading(carregamento rapido)
+- :heavy_check_mark: eager loading(carregamento rapido);
 
-- :heavy_check_mark: intens a mais
-  - Popular banco com dados ao iniciar
-    - User Admin
-    - Marcas
-    - Categorias
+- :heavy_check_mark: intens a mais;
+  - Popular banco com dados ao iniciar;
+    - User Admin;
+    - Marcas;
+    - Categorias;
 
 ## :rocket: tecnologias
 
