@@ -52,14 +52,14 @@ Resolução do teste de Desenvolvedor Laravel Pleno
   - [x] definir as migrations necessarias
   - [x] definir modelos
 
-- [x] 2 CRUD do usuario
+- [x] 2 CRUD `categorias`,`marcas` e `produtos`
 - [x] 3 autenticação de usuario com pacote do Laravel Breeze
 
 - [x] 4 relacionamento no eloquente
 
-  - [x] um para um
-  - [x] um para muitos
-  - [x] muito para muitos
+  - [x] um para um => `produto-descrição`
+  - [x] um para muitos => `marca-produtos`
+  - [x] muito para muitos => `categorias-produtos`
 
 - [x] 5 Validação e tratamento de erros
 
@@ -71,7 +71,7 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 
 - [x] 7 testes automatizados PHPunit
 
-- [x] 7 E-mail e notificações
+- [x] 8 E-mail e notificações
 
   - [x] envio de e-mail
   - [x] notificação para usuario
@@ -118,7 +118,9 @@ $ php artisan key:generate
 +  Usei o Mysql e o Mailtrap mas fique a vontade pra usar o banco e serviço de email que você quiser
 ```
 
-> no arquivo `.env`
+duplicar o aquivo `example.env` e renomear para `.env`
+
+> no arquivo `.env` inseriri as seguites informações
 
 ```env
 # Banco de dados
@@ -154,6 +156,13 @@ $ php artisan serve
 ```
 
 o projeto estara rodando em [http://localhost:8000](http://localhost:8000)
+
+- para ter acesso as rotas de `categorias e marcas` e necessario estar logado como `admin` esse e usario root e pode ser modificado a qualquer momento
+
+  - email: `admin@email.com`
+  - senha: `123456`
+
+- pra acesso de usuario comum e so acessar http://127.0.0.1:8000/ estando deslogado clicar em `Register`
 
 ## :memo: licença
 
