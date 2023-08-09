@@ -48,39 +48,39 @@ Resolução do teste de Desenvolvedor Laravel Pleno
 
 - :heavy_check_mark: 1 criar projeto laravel basico
 
-  - [x] configurar o banco de dados
-  - [x] definir as migrations necessarias
-  - [x] definir modelos
+  - :heavy_check_mark: configurar o banco de dados
+  - :heavy_check_mark: definir as migrations necessarias
+  - :heavy_check_mark: definir modelos
 
-- [x] 2 CRUD do usuario
-- [x] 3 autenticação de usuario com pacote do Laravel Breeze
+- :heavy_check_mark: 2 CRUD `categorias`,`marcas` e `produtos`
+- :heavy_check_mark: 3 autenticação de usuario com pacote do Laravel Breeze
 
-- [x] 4 relacionamento no eloquente
+- :heavy_check_mark: 4 relacionamento no eloquente
 
-  - [x] um para um
-  - [x] um para muitos
-  - [x] muito para muitos
+  - :heavy_check_mark: um para um => `produto-descrição`
+  - :heavy_check_mark: um para muitos => `marca-produtos`
+  - :heavy_check_mark: muito para muitos => `categorias-produtos`
 
-- [x] 5 Validação e tratamento de erros
+- :heavy_check_mark: 5 Validação e tratamento de erros
 
-  - [x] criar formularios
-  - [x] implementar validações
-  - [x] tratar o erros com mensagens
+  - :heavy_check_mark: criar formularios
+  - :heavy_check_mark: implementar validações
+  - :heavy_check_mark: tratar o erros com mensagens
 
-- [x] 6 middleware
+- :heavy_check_mark: 6 middleware
 
-- [x] 7 testes automatizados PHPunit
+- :heavy_check_mark: 7 testes automatizados PHPunit
 
-- [x] 7 E-mail e notificações
+- :heavy_check_mark: 8 E-mail e notificações
 
-  - [x] envio de e-mail
-  - [x] notificação para usuario
+  - :heavy_check_mark: envio de e-mail
+  - :heavy_check_mark: notificação para usuario
 
-- [x] implementar paginação
+- :heavy_check_mark: implementar paginação
 
-- [x] eager loading(carregamento rapido)
+- :heavy_check_mark: eager loading(carregamento rapido)
 
-- [x] intens a mais
+- :heavy_check_mark: intens a mais
   - Popular banco com dados ao iniciar
     - User Admin
     - Marcas
@@ -118,7 +118,9 @@ $ php artisan key:generate
 +  Usei o Mysql e o Mailtrap mas fique a vontade pra usar o banco e serviço de email que você quiser
 ```
 
-> no arquivo `.env`
+duplicar o aquivo `example.env` e renomear para `.env`
+
+> no arquivo `.env` inseriri as seguites informações
 
 ```env
 # Banco de dados
@@ -140,6 +142,12 @@ MAIL_FROM_ADDRESS="hello@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
+- criar tabelas no banco
+
+```bash
+php artisan migrate
+```
+
 - excutar o seeders
 
 ```bash
@@ -154,6 +162,13 @@ $ php artisan serve
 ```
 
 o projeto estara rodando em [http://localhost:8000](http://localhost:8000)
+
+- para ter acesso as rotas de `categorias e marcas` e necessario estar logado como `admin` esse e usario root e pode ser modificado a qualquer momento
+
+  - email: `admin@email.com`
+  - senha: `123456`
+
+- pra acesso de usuario comum e so acessar http://127.0.0.1:8000/ estando deslogado clicar em `Register` para criar um novo usuario(lembrando que o email e unico e nao pode ser igual a um já cadastrado)
 
 ## :memo: licença
 

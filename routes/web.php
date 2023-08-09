@@ -63,4 +63,9 @@ Route::middleware(['auth', 'admin'])->prefix('/brands')->group(function () {
   Route::get('/create/new', [BrandController::class, 'create'])->name('brands.create');
 });
 
+
+Route::fallback(function () {
+  return view('errors.404');
+});
+
 require __DIR__ . '/auth.php';
