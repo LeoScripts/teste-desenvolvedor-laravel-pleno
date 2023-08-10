@@ -1,13 +1,13 @@
 <?php
 
-namespace Tests\Feature\Categories;
+namespace Tests\Feature\Brands;
 
 use App\Models\User;
-use App\Models\Categories;
+use App\Models\Brand;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class CategoriesTest extends TestCase
+class BrandsTest extends TestCase
 {
   use RefreshDatabase;
 
@@ -17,8 +17,8 @@ class CategoriesTest extends TestCase
       'isAdmin' => 1
     ]);
     $this->actingAs($user);
-    $this->post(route('categories.store'), ['name' => 'categoria_teste']);
-    $this->assertDatabaseHas('categories', ['name' => 'categoria_teste']);
+    $this->post(route('brands.store'), ['name' => 'Marca_teste']);
+    $this->assertDatabaseHas('brands', ['name' => 'Marca_teste']);
   }
 
   public function test_update_category()
@@ -27,14 +27,14 @@ class CategoriesTest extends TestCase
       'isAdmin' => 1
     ]);
     $this->actingAs($user);
-    $category = Categories::factory()->create(['name' => 'categoria_teste']);
-    $this->put("/categories/{$category->id}", [
-      'name' => 'categoria_teste-editado',
+    $category = Brand::factory()->create(['name' => 'Marca_teste']);
+    $this->put("/brands/{$category->id}", [
+      'name' => 'Marca_teste-editado',
     ]);
 
-    $this->assertDatabaseHas('categories', [
+    $this->assertDatabaseHas('brands', [
       'id' => $category->id,
-      'name' => 'categoria_teste-editado',
+      'name' => 'Marca_teste-editado',
     ]);
   }
 
@@ -44,7 +44,7 @@ class CategoriesTest extends TestCase
       'isAdmin' => 1
     ]);
     $result = $this->actingAs($user)
-      ->delete(route('categories.destroy', $user->id), [
+      ->delete(route('brands.destroy', $user->id), [
         'password' => '123456'
       ]);
 
